@@ -77,4 +77,6 @@ document.querySelector('button[type="reset"]').addEventListener('click', () => {
     document.querySelector('.total-per-person .calculated-result').innerText = '0.00';
     document.querySelector('input[placeholder="Custom"]').value="";
     document.querySelector('input[placeholder="Custom"]').placeholder = "Custom";
+    document.querySelector('.error-message').classList.remove('active');
+    document.querySelector('.number-of-people').style.outline = "none";
 });
