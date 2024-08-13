@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <img src="logo.svg" alt="">
+  <main class="container">
+      <form action="">
+        <label for="bill">Bill</label>
+        <div class="bill"><img src="icon-dollar.svg" alt=""><input type="text" name="" id="bill" value="0"></div>
+        <fieldset class="tip-percentage">
+          <legend>Select Tip %</legend>
+          <button type="button" value="0.05">5%</button>
+          <button type="button" value="0.1">10%</button>
+          <button type="button" value="0.15">15%</button>
+          <button type="button" value="0.25">25%</button>
+          <button type="button" value="0.5">50%</button>
+          <input type="text" name="" id="" placeholder="Custom" value="">
+        </fieldset>
+        <div class="labels">
+          <label for="number-of-people">Number of People</label>
+          <label for="number-of-people" class="error-message">Can't be zero</label>
+        </div>
+        <div class="number-of-people"><img src="icon-person.svg" alt=""><input type="text" name=""
+            id="number-of-people" value="0">
+        </div>
+      </form>
+      <div class="result">
+        <div class="tip-per-person">
+          <span class="text-tip-amount"><span>Tip Amount</span><br /><span class="per-person">/ person</span></span>
+          <span class="result-tip-per-person"><img src="icon-dollar.svg" alt=""><span class="calculated-result">0.00</span></span>
+        </div>
+        <div class="total-per-person">
+          <span class="text-total"><span>Total</span><br /><span class="per-person">/ person</span></span>
+          <span class="result-total-per-person"><img src="icon-dollar.svg" alt=""><span class="calculated-result">0.00</span></span>
+        </div>
+        <button type="reset">RESET</button>
+
+
+      </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>

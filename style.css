@@ -1,0 +1,272 @@
+:root {
+    /* primary color */
+    --Strong_cyan: hsl(172, 67%, 45%);
+    /* neutral color */
+    --Very_dark_cyan: hsl(183, 100%, 15%);
+    --Dark_grayish_cyan: hsl(186, 14%, 43%);
+    --Grayish_cyan: hsl(184, 14%, 56%);
+    --Light_grayish_cyan: hsl(185, 41%, 84%);
+    --Very_light_grayish_cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    background-color: var(--Light_grayish_cyan);
+    font-weight: 700;
+    padding-top: 2.4rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+.container {
+    width: 100vw;
+    max-width:420px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    justify-self:flex-end;
+    padding:0.8rem 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    position: absolute;
+    bottom: 0;
+}
+label{
+    display: inline-block;
+    margin-bottom: 0.1rem;
+}
+label,legend{
+    color:var(--Dark_grayish_cyan)
+}
+input[type="text"]{
+    text-align: right;
+    font-size: 1.3rem;
+    color: var(--Dark_grayish_cyan);
+}
+input:hover{
+    cursor: pointer;
+}
+    
+
+.bill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding:0.20rem 0.5rem 0.20rem 1rem;
+    background-color: var(--Very_light_grayish_cyan);
+    border-radius: 0.27rem;
+}
+.bill input {
+    border: none;
+    width:86%;
+    background-color: var(--Very_light_grayish_cyan);
+}
+
+.bill input:focus {
+    outline: none;
+}
+.bill:focus-within{
+    outline: 1.9px solid var(--Strong_cyan);
+}
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem 1rem;
+    border: none;
+    margin-top: 0.8rem;
+}
+fieldset > button{
+    font-size: 1.4rem;
+    border: none;
+    background-color: var(--Very_dark_cyan);
+    border-radius: 0.5rem;
+    color: var(--White);
+}
+fieldset > button:hover{
+    background-color: var(--Light_grayish_cyan);
+    color: var(--Very_dark_cyan);
+    cursor: pointer;
+}
+fieldset>input[type="text"] {
+    width: 100%;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--Very_light_grayish_cyan);
+    color: var(--Very_dark_cyan);
+}
+fieldset > input[type="text"]:focus{
+    outline: none;
+}
+.number-of-people {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding:0.20rem 0.5rem 0.20rem 1rem;
+    background-color: var(--Very_light_grayish_cyan);
+    border-radius: 0.27rem;
+}
+.number-of-people:focus-within{
+    outline:1.9px solid var(--Strong_cyan) ;
+}
+.number-of-people>input {
+    width: 86%;
+    border: none;
+    background-color: var(--Very_light_grayish_cyan);
+}
+
+.number-of-people>input:focus {
+    outline: none;
+}
+.result{
+    margin-top: 0.8rem;
+    background-color: var(--Very_dark_cyan);
+    padding:1.5rem 1.2rem 1.16rem 1.2rem;
+    border-radius: 0.8rem;
+}
+.tip-per-person,
+.total-per-person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.result-tip-per-person,
+.result-total-per-person {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 2.2rem;
+    margin-top: 0.8rem;
+}
+
+.result-tip-per-person>img,
+.result-total-per-person>img {
+    width: 13.5px;
+}
+.text-tip-amount > span:nth-child(1),.text-total > span:nth-child(1){
+    color:var(--White);
+}
+.per-person{
+    color: var(--Grayish_cyan);
+}
+button[type="reset"]{
+    display: block;
+    margin:0 auto;
+    width:85%;
+    font-size:1.5rem;
+    background-color: var(--Dark_grayish_cyan);
+    color: var(--Very_dark_cyan);
+    opacity: 0.3;
+    border:none;
+    border-radius: 0.5rem;
+    padding:0.2rem 0.7rem;
+    margin-top: 1rem;
+    letter-spacing: 0.015rem;
+}
+button[type="reset"]:active{
+    background-color: var(--Very_light_grayish_cyan);
+    color: var(--Dark_grayish_cyan);
+}
+.calculated-result{
+    color: var(--Strong_cyan);
+}
+.error-message{
+    color:rgba(255,0,0,0.75);
+    visibility: hidden;
+}
+.labels{
+    display: flex;
+    justify-content: space-between;
+}
+.active{
+    visibility: visible;
+}
+@media screen and (min-width:700px) {
+    body{
+        justify-content: center;
+        padding:0;
+    }
+    body > img{
+        display: block;
+        margin-top: -6rem;
+        margin-bottom: 3rem;
+        
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: static;
+        width: 80vw;
+        max-width: 850px;
+        grid-column-gap: 2rem;
+        padding-bottom: 1.5rem;
+        border-radius: 1.5rem;
+    }
+    label[for="bill"]{
+        margin-top:1rem;
+    }
+    fieldset{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 2rem;
+    }
+    label[for="number-of-people"]{
+        margin-top: 1.5rem;
+    }
+    .number-of-people{
+        margin-bottom: 1.5rem;
+    }
+    button[type="reset"]{
+        margin-top: 7.4rem;
+    }
+}
